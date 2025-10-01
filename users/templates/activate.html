@@ -1,0 +1,12 @@
+
+<div>
+    <h2>Food Blog</h2>
+    <h3>Thanks for creating an account on our Blog.</h3>
+    <p>Click the below link to verify your account. </p>
+
+    <p>
+        Confirm Link : <a href="{{domain}}{% url 'activate' uidb64=uid token=token %}" target="_blank">{{domain}}{% url 'activate' uidb64=uid token=token %}</a>
+    </p>
+
+
+</div>
