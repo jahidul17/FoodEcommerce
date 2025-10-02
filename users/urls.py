@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import RegisterAPIView, ActivateAPIView, MyTokenObtainPairView, LogoutView, ProfileViewSet,PasswordResetRequestAPIView,PasswordResetConfirmAPIView
+from .views import RegisterAPIView, ActivateAPIView, MyTokenObtainPairView, LogoutView, ProfileViewSet,PasswordResetRequestAPIView,PasswordResetConfirmAPIView, ChangePasswordView
 from rest_framework_simplejwt.views import TokenRefreshView
 from rest_framework.routers import DefaultRouter
 
@@ -15,5 +15,5 @@ urlpatterns = [
     path("", include(router.urls)),
     path("password-reset/", PasswordResetRequestAPIView.as_view(), name="password_reset"),
     path("password-reset-confirm/<uidb64>/<token>/", PasswordResetConfirmAPIView.as_view(), name="password_reset_confirm"),
-
+    path("change-password/", ChangePasswordView.as_view(), name="change-password"),
 ]

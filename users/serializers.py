@@ -30,10 +30,48 @@ class RegisterSerializer(serializers.ModelSerializer):
         user.save()
         return user
 
+# class ProfileSerializer(serializers.ModelSerializer):
+#     user = UserSerializer(read_only=True)
+#     class Meta:
+#         model = Profile
+#         fields = ("user", "address", "avatar", "extra")
+
+
 class ProfileSerializer(serializers.ModelSerializer):
-    user = UserSerializer(read_only=True)
+    user = UserSerializer()
+
     class Meta:
         model = Profile
-        fields = ("user", "address", "avatar", "extra")
+        fields = ["user", "address", "avatar", "extra"]
 
+    def update(self, instance, validated_data):
+        # Extract user data if present
+        user_data = validated_data.pop("user", None)
+
+        # Update profile fields
+        for attr, value in validated_data.items():
+            setattr(instance, attr, value)
+        instance.save()
+
+        # Update nested user fields
+        if user_data:
+            user = instance.user
+            for attr, value in user_data.items():
+                setattr(user, attr, value)
+            user.save()
+
+        return instance
+
+
+
+
+class ChangePasswordSerializer(serializers.Serializer):
+    old_password = serializers.CharField(required=True)
+    new_password = serializers.CharField(required=True)
+
+    def validate_new_password(self, value):
+        # You can add Django's built-in password validators here
+        from django.contrib.auth.password_validation import validate_password
+        validate_password(value)
+        return value
 
