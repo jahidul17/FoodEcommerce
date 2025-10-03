@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt.token_blacklist",  # for logout/blacklist
     "phonenumber_field",
     "users",  # your new app
+    "menu",
 ]
 
 # REST framework + Simple JWT basic config
