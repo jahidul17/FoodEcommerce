@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     "phonenumber_field",
     "users",  # your new app
     "menu",
+    "cart_checkout",
+    "payment",
 ]
 
 # REST framework + Simple JWT basic config

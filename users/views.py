@@ -68,7 +68,7 @@ class RegisterAPIView(APIView):
             
             email_subject="Activate Your Account"
             message=render_to_string(
-                'activate.html',
+                'email/activate.html',
             {
                 'user':user,
                 'domain':'http://127.0.0.1:8000',
@@ -121,7 +121,7 @@ class ActivateAPIView(View):
         if user is not None and generate_token.check_token(user,token):
             user.is_active=True
             user.save()
-            return redirect('register')
+            return redirect('token_obtain_pair')
         else:
             return redirect('register') 
 
