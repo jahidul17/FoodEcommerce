@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "menu",
     "cart_checkout",
     "payment",
+    "reviews",
 ]
 
 # REST framework + Simple JWT basic config
