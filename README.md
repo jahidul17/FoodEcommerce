@@ -21,7 +21,7 @@ Developed a full-featured **Food E-commerce RESTful API** to manage the complete
 1. **Clone the repository**
     ```bash
     git clone https://github.com/jahidul17/FoodEcommerce
-    cd aichatbot
+    cd FoodEcommerce
     ```
 
 2. **Create and activate a virtual environment:**
@@ -48,9 +48,10 @@ Developed a full-featured **Food E-commerce RESTful API** to manage the complete
 5. **Create a superuser (As admin login -Optional)**
 Create .env file:
     ```bash
+    EMAIL=Your_email
+    EMAIL_PASSWORD=Email_generated_app_password_not_email_pass
     SECRET_KEY=your_secret_key
     DEBUG=True
-    OPENAI_API_KEY=your_openai_api_key
 
     ```
 
