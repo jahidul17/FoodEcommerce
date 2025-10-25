@@ -45,8 +45,8 @@ Developed a full-featured **Food E-commerce RESTful API** to manage the complete
     ```
 
 
-5. **Create a superuser (As admin login -Optional)**
-Create .env file:
+5. **Create .env file:**
+
     ```bash
     EMAIL=Your_email
     EMAIL_PASSWORD=Email_generated_app_password_not_email_pass
