@@ -1,6 +1,6 @@
 ## 🍔 Food E-commerce API (Django REST Framework)
 
-**Tech Stack:** Python, Django, Django REST Framework, JWT Authentication, SQLite
+**Tech Stack:** Python, Django, Django REST Framework, JWT Authentication, SQLite, Pillow, Django Filter
 
 ### Description
 Developed a full-featured **Food E-commerce RESTful API** to manage the complete online food ordering process — including user registration, authentication, product management, cart, checkout, payment, and review systems. Designed using **modular Django apps** for scalability and clean architecture.
