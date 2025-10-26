@@ -12,7 +12,7 @@ Developed a full-featured **Food E-commerce RESTful API** to manage the complete
 - **Payment Integration:** Payment API for handling transactions with SSLCommerz.  
 - **Order Management:** Endpoints for order placement, order history, and status tracking.  
 - **Reviews & Ratings:** Customers can post reviews and give 1–5 star ratings for food items.  
-- **Email Verification & Password Reset:** Implemented secure email-based verification and password reset workflows.  
+- **Email Verification & Password Reset:** Implemented secure email-based verification and password reset, changes workflows.  
 - **Filtering & Pagination:** Integrated django-filter and DRF pagination for efficient data retrieval. 
 
 
@@ -49,13 +49,11 @@ Developed a full-featured **Food E-commerce RESTful API** to manage the complete
 
     ```bash
     EMAIL=Your_email
-    EMAIL_PASSWORD=Email_generated_app_password_not_email_pass
+    EMAIL_PASSWORD=From_goole_account_generated_app_password_not_email_password
     SECRET_KEY=your_secret_key
     DEBUG=True
 
     ```
-
-
 
 5. **Apply migrations**
     ```bash
